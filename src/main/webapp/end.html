@@ -1,0 +1,63 @@
+
+<!-- <!DOCTYPE html>
+<html>
+<head><title>Game Over</title>  <link rel="stylesheet" href="style.css">
+<script>
+    new Audio("sounds/Thanks.wav").play();
+  </script>
+  
+</head>
+<body style="margin:0; padding:0; background-image: url('img_files/Thank.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+
+<body>
+  <div style="text-align: center;color: rgb(173, 245, 252);padding: 400px; ">
+  <div style="background-color:black;">
+  <h2>We sincerely thank you for being a part of Kaun Banega Crorepati. Your participation made it special!</h2>
+    <button onclick="location.href='index.html'">&#127968;Go to Home</button>
+  
+  </div>
+    
+  </div>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Game Over</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    window.onload = function () {
+      new Audio("sounds/Thanks.wav").play();
+
+      const end = Date.now() + 5000;
+      (function frame() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    };
+  </script>
+</head>
+
+<body style="margin:0; padding:0; background-image: url('img_files/12.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+  <div style="text-align: center; color: wheat; padding: 400px;">
+    <h2>We sincerely thank you for being a part of Kaun Banega Crorepati. Your participation made it special!</h2>
+    <button onclick="location.href='index.html'">&#127968;Go to Home</button>
+  </div>
+</body>
+</html>
